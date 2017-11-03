@@ -33,22 +33,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="41J-rw-AqF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="41J-rw-AqF">
                                 <rect key="frame" x="0.0" y="132.5" width="375" height="534.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="134" id="Ses-Qf-1kQ" customClass="CategoryCell" customModule="devslopesShop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="134"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="159" id="Ses-Qf-1kQ" customClass="CategoryCell" customModule="devslopesShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ses-Qf-1kQ" id="bqt-Wm-VNt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="BLM-8v-LKs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="153"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="14K-g5-L6f"/>
+                                                        <constraint firstAttribute="height" constant="153" id="gMU-3v-fKH"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-Pb-gOB">
-                                                    <rect key="frame" x="108" y="46.5" width="158" height="41"/>
+                                                    <rect key="frame" x="108.5" y="59" width="158" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="158" id="3PU-1D-CT1"/>
                                                         <constraint firstAttribute="height" constant="41" id="hwX-Cc-frw"/>
@@ -59,17 +63,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="BLM-8v-LKs" secondAttribute="bottom" id="Pqh-CZ-56U"/>
+                                                <constraint firstAttribute="bottom" secondItem="BLM-8v-LKs" secondAttribute="bottom" constant="3" id="MSP-sl-7Fo"/>
                                                 <constraint firstItem="Esd-Pb-gOB" firstAttribute="centerY" secondItem="bqt-Wm-VNt" secondAttribute="centerY" id="TLi-gb-Eue"/>
                                                 <constraint firstItem="Esd-Pb-gOB" firstAttribute="centerX" secondItem="bqt-Wm-VNt" secondAttribute="centerX" id="W2X-cM-MpO"/>
                                                 <constraint firstAttribute="trailing" secondItem="BLM-8v-LKs" secondAttribute="trailing" id="WBc-mW-VbZ"/>
                                                 <constraint firstItem="BLM-8v-LKs" firstAttribute="leading" secondItem="bqt-Wm-VNt" secondAttribute="leading" id="WKp-6g-BVa"/>
-                                                <constraint firstItem="BLM-8v-LKs" firstAttribute="top" secondItem="bqt-Wm-VNt" secondAttribute="top" id="mje-1k-RKF"/>
+                                                <constraint firstItem="BLM-8v-LKs" firstAttribute="top" secondItem="bqt-Wm-VNt" secondAttribute="top" constant="3" id="mKm-LX-Noy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImage" destination="BLM-8v-LKs" id="AFp-Uu-5t6"/>
-                                            <outlet property="categoryLbl" destination="Esd-Pb-gOB" id="jwe-UT-Ik3"/>
+                                            <outlet property="categoryTitle" destination="Esd-Pb-gOB" id="jwe-UT-Ik3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
