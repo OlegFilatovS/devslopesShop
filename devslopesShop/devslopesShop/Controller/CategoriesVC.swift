@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CategoriesVC: UIViewController {
+class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    
     
     @IBOutlet weak var categoryTable : UITableView!
 
@@ -17,11 +19,15 @@ class CategoriesVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+        return DataService.instance.getCategories().count
+    
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 
 }
 
