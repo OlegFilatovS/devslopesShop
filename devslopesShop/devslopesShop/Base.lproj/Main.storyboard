@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jxe-P1-OAY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jxe-P1-OAY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,17 +92,17 @@
                     <navigationItem key="navigationItem" title="CODER SWAG" id="DLL-sw-hIO"/>
                     <connections>
                         <outlet property="categoryTable" destination="41J-rw-AqF" id="jUa-Ib-pXJ"/>
-                        <segue destination="PA2-bj-ZGv" kind="show" id="20q-Nd-A4j"/>
+                        <segue destination="PA2-bj-ZGv" kind="show" identifier="ProductVC" id="20q-Nd-A4j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="842" y="493"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="g8y-Hd-PWl">
             <objects>
-                <viewController id="PA2-bj-ZGv" sceneMemberID="viewController">
+                <viewController id="PA2-bj-ZGv" customClass="ProductsVC" customModule="devslopesShop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9zt-Fe-K5e"/>
                         <viewControllerLayoutGuide type="bottom" id="3Qh-us-v4T"/>
@@ -123,7 +123,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JkL-uL-pAF">
                                 <rect key="frame" x="16" y="134" width="343" height="533"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6zR-Ok-AZp">
                                     <size key="itemSize" width="161" height="260"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -131,7 +131,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ncz-Wi-iQ1" customClass="ProductCell" customModule="devslopesShop" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="ncz-Wi-iQ1" customClass="ProductCell" customModule="devslopesShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="161" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -145,7 +145,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devslopes logo Graphic T-Shirt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sT-d0-FwM">
-                                                    <rect key="frame" x="18" y="181" width="125" height="48"/>
+                                                    <rect key="frame" x="10" y="181" width="141" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="QOu-3f-Qqd"/>
                                                     </constraints>
@@ -153,7 +153,7 @@
                                                     <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      $25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHI-YM-Hd6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHI-YM-Hd6">
                                                     <rect key="frame" x="0.0" y="229" width="161" height="26"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                                     <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,6 +193,9 @@
                             <constraint firstItem="JkL-uL-pAF" firstAttribute="leading" secondItem="DuB-6p-mDP" secondAttribute="leadingMargin" id="yT7-yQ-ud3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="JkL-uL-pAF" id="YiU-lM-6xP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vf5-4i-LT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
